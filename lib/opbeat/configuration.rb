@@ -3,7 +3,7 @@ require 'logger'
 module Opbeat
   class Configuration
     DEFAULTS = {
-      server: "https://intake.opbeat.com".freeze,
+      server: "https://app.trainwreck.io".freeze,
       logger: Logger.new(nil),
       context_lines: 3,
       enabled_environments: %w{production},
