@@ -6,7 +6,7 @@ RSpec.describe Opbeat do
 
   describe "self.start!" do
     it "delegates to client" do
-      conf = Opbeat::Configuration.new app_id: 'x', organization_id: 'y', secret_token: 'z'
+      conf = Opbeat::Configuration.new app_id: 'x', secret_token: 'z'
       expect(Opbeat::Client).to receive(:start!).with(conf) { true }
       Opbeat.start! conf
     end

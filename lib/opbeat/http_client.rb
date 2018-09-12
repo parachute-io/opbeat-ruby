@@ -64,8 +64,7 @@ module Opbeat
     end
 
     def abs_path path
-      "/api/v1/organizations/#{@config.organization_id}" +
-        "/apps/#{@config.app_id}#{path}"
+      "/api/v1/apps/#{@config.app_id}#{path}"
     end
 
     def encode(event)

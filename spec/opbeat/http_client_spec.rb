@@ -6,7 +6,6 @@ module Opbeat
     let(:configuration) do
       Configuration.new do |c|
         c.secret_token = 'TOKEN'
-        c.organization_id = 'ORG'
         c.app_id = 'APP'
       end
     end

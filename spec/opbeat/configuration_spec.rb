@@ -28,7 +28,7 @@ module Opbeat
     end
 
     describe "#validate" do
-      let(:auth_opts) { { app_id: 'x', organization_id: 'y', secret_token: 'z' } }
+      let(:auth_opts) { { app_id: 'x', secret_token: 'z' } }
       it "is true when all auth options are set" do
         expect(Configuration.new(auth_opts).validate!).to be true
       end
@@ -39,9 +39,10 @@ module Opbeat
         auth_opts.delete(:app_id)
         expect(Configuration.new(auth_opts).validate!).to be false
       end
-      it "needs an organization_id" do
+      # DELETEME
+      it "no longer needs an organization_id" do
         auth_opts.delete(:organization_id)
-        expect(Configuration.new(auth_opts).validate!).to be false
+        expect(Configuration.new(auth_opts).validate!).to be true
       end
       it "needs a secret token" do
         auth_opts.delete(:secret_token)

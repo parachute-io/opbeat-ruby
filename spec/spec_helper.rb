@@ -42,7 +42,6 @@ RSpec.configure do |config|
   def build_config attrs = {}
     Opbeat::Configuration.new({
       app_id: 'x',
-      organization_id: 'y',
       secret_token: 'z'
     }.merge(attrs))
   end

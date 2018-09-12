@@ -3,7 +3,7 @@ require 'spec_helper'
 module Opbeat
   RSpec.describe Client do
 
-    let(:config) { Configuration.new app_id: 'x', organization_id: 'y', secret_token: 'z' }
+    let(:config) { Configuration.new app_id: 'x', secret_token: 'z' }
 
     describe ".start!" do
       it "set's up an instance and only one" do

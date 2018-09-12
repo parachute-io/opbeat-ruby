@@ -26,7 +26,6 @@ Add the following to your `config/environments/production.rb`:
 ```ruby
 Rails.application.configure do |config|
   # ...
-  config.opbeat.organization_id = 'XXX'
   config.opbeat.app_id = 'XXX'
   config.opbeat.secret_token = 'XXX'
 end
@@ -39,7 +38,6 @@ require 'opbeat'
 
 # set up an Opbeat configuration
 config = Opbeat::Configuration.new do |conf|
-  conf.organization_id = 'XXX'
   conf.app_id = 'XXX'
   conf.secret_token = 'XXX'
 end

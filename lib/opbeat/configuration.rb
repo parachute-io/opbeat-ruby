@@ -30,7 +30,6 @@ module Opbeat
     }.freeze
 
     attr_accessor :secret_token
-    attr_accessor :organization_id
     attr_accessor :app_id
 
     attr_accessor :server
@@ -68,7 +67,7 @@ module Opbeat
     end
 
     def validate!
-      %w{app_id secret_token organization_id}.each do |key|
+      %w{app_id secret_token}.each do |key|
         raise Error.new("Opbeat Configuration missing `#{key}'") unless self.send(key)
       end
 
